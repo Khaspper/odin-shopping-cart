@@ -3,11 +3,7 @@ import fetchManga from "./api/FetchManga";
 fetchManga();
 
 function App() {
-  return (
-    <>
-      <div>Hi</div>
-    </>
-  );
+  return <></>;
 }
 
 export default App;

@@ -5,4 +5,6 @@ export type TManga = {
   imgWEBP: string;
   imgJPG: string;
   authors: string[];
+  score: number;
+  genre: string[];
 };

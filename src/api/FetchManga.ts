@@ -21,6 +21,11 @@ export default async function fetchManga(
     const mangas: TManga[] = [];
     const json = await response.json();
     for (const data of json.data) {
+      const genre: string[] = [];
+      for (const genres of data.genres) {
+        genre.push(genres.name);
+      }
+
       const manga: TManga = {
         titleEnglish: data.title_english,
         titleJapanese: data.title_japanese,
@@ -28,6 +33,8 @@ export default async function fetchManga(
         imgWEBP: data.images.webp,
         imgJPG: data.images.jpg,
         authors: data.authors,
+        score: data.score,
+        genre: genre,
       };
       mangas.push(manga);
     }
