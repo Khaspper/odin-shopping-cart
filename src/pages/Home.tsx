@@ -1,9 +1,6 @@
 import cover from "../assets/img/website-cover.jpg";
 import Navbar from "../components/Navbar";
 import PersonalFavorites from "../components/PersonalFavorites";
-import fetchManga from "../api/FetchManga";
-
-fetchManga();
 
 export default function Home() {
   return (
