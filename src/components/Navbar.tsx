@@ -29,7 +29,12 @@ export default function Navbar() {
           className="transition delay-100 duration-300 ease-in-out hover:scale-120 cursor-pointer"
         />
       </Link>
-      <Link to="/shop">Shop</Link>
+      <Link
+        to="/shop"
+        className="transition delay-100 duration-300 ease-in-out hover:scale-120 cursor-pointer"
+      >
+        Shop
+      </Link>
     </div>
   );
 }

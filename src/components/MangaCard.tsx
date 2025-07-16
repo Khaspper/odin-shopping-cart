@@ -11,7 +11,7 @@ export default function MangaCard({ manga }: TMangaCard) {
       <img
         src={manga.imgJPG}
         alt={`${manga.titleEnglish} manga cover`}
-        className=""
+        className="transition delay-100 duration-300 ease-in-out hover:scale-110 cursor-pointer"
       />
       <p className="truncate text-center text-white">{manga.titleEnglish}</p>
     </div>
