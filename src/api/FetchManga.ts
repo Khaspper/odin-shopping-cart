@@ -27,6 +27,7 @@ export default async function fetchManga(
       }
 
       const manga: TManga = {
+        id: crypto.randomUUID(),
         titleEnglish: data.title_english,
         titleJapanese: data.title_japanese,
         synopsis: data.synopsis,

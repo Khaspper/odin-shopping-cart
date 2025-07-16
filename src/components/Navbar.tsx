@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="flex m-4 md:m-10 items-center justify-between md:self-start">
+    <div className="flex m-4 md:m-10 items-center justify-around md:self-start">
       <Link to="/">
         <img
           src={mangaIcon}

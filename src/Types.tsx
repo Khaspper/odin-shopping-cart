@@ -1,4 +1,5 @@
 export type TManga = {
+  id: string;
   titleEnglish: string;
   titleJapanese: string;
   synopsis: string;
