@@ -1,9 +1,8 @@
-import fetchManga from "./api/FetchManga";
-
-fetchManga();
+import { useParams } from "react-router-dom";
 
 function App() {
-  return <></>;
+  const { id } = useParams();
+  return <div>Gangster: {id}</div>;
 }
 
 export default App;
