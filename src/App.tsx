@@ -1,3 +1,7 @@
+import AllTimeTopManga from "./api/AllTimeTopManga";
+
+AllTimeTopManga();
+
 function App() {
   return (
     <>
