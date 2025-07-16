@@ -1,11 +1,14 @@
 import cover from "../assets/img/website-cover.jpg";
 import Navbar from "../components/Navbar";
 import PersonalFavorites from "../components/PersonalFavorites";
+import fetchManga from "../api/FetchManga";
+
+fetchManga();
 
 export default function Home() {
   return (
     <div
-      className="h-screen bg-[url('../assets/img/website-cover.jpg')] bg-cover bg-center w-full flex flex-col justify-between md:grid md:grid-cols-2"
+      className="h-screen bg-[url('../assets/img/website-cover.jpg')] bg-cover bg-center w-full flex flex-col justify-between"
       style={{ backgroundImage: `url(${cover})` }}
     >
       <Navbar />
