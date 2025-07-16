@@ -3,8 +3,8 @@ import shoppingCartIcon from "../assets/img/shopping-cart-icon.png";
 
 export default function Navbar() {
   return (
-    <div className="border-2 flex m-4 items-center justify-between md:self-start">
-      <img src={mangaIcon} alt="manga book icon" height="auto" width={40} />
+    <div className="flex m-4 md:m-10 items-center justify-between md:self-start">
+      <img src={mangaIcon} alt="manga book icon" height="auto" width={60} />
       {/* Change this to Searchbar */}
       <input
         className="border-2 rounded-full px-2 md:w-[300px]"
@@ -15,7 +15,7 @@ export default function Navbar() {
         src={shoppingCartIcon}
         alt="shopping cart"
         height="auto"
-        width={40}
+        width={60}
       />
     </div>
   );

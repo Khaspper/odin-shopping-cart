@@ -1,6 +1,6 @@
 export default function PersonalFavorites() {
   return (
-    <div className="border-2 flex m-4 md:self-end">
+    <div className="border-2 flex m-4 md:m-10 md:self-end">
       <section>1</section>
       <section>2</section>
       <section>3</section>
