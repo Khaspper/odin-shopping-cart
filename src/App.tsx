@@ -1,6 +1,6 @@
-import AllTimeTopManga from "./api/AllTimeTopManga";
+import fetchManga from "./api/FetchManga";
 
-AllTimeTopManga();
+fetchManga();
 
 function App() {
   return (

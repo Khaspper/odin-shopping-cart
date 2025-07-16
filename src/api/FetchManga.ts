@@ -1,9 +1,14 @@
 import type { TManga } from "../Types";
 
-export default async function AllTimeTopManga(limit = 3) {
+type TFilter = "" | "publishing" | "upcoming" | "bypopularity" | "favorite";
+
+export default async function fetchManga(
+  limit: number = 3,
+  filter: TFilter = ""
+) {
   try {
     const response = await fetch(
-      `https://api.jikan.moe/v4/top/manga?limit=${limit}`,
+      `https://api.jikan.moe/v4/top/manga?limit=${limit}&${filter}`,
       {
         mode: "cors",
       }
@@ -13,7 +18,7 @@ export default async function AllTimeTopManga(limit = 3) {
         `Server returned ${response.status} ${response.statusText}`
       );
     }
-    const topManga: TManga[] = [];
+    const mangas: TManga[] = [];
     const json = await response.json();
     for (const data of json.data) {
       const manga: TManga = {
@@ -24,10 +29,10 @@ export default async function AllTimeTopManga(limit = 3) {
         imgJPG: data.images.jpg,
         authors: data.authors,
       };
-      topManga.push(manga);
+      mangas.push(manga);
     }
-    console.log(topManga);
-    return topManga;
+    console.log(mangas);
+    return mangas;
   } catch (error) {
     console.log("error");
     console.log(error);
