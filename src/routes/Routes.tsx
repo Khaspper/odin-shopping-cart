@@ -1,5 +1,5 @@
-import App from "../App";
 import Home from "../pages/Home";
+import MangaPage from "../components/MangaPage";
 
 export const routes = [
   {
@@ -7,7 +7,7 @@ export const routes = [
     element: <Home />,
   },
   {
-    path: "test/:id",
-    element: <App />,
+    path: "test/:mangaName",
+    element: <MangaPage />,
   },
 ];

@@ -16,6 +16,7 @@ export default function Navbar() {
       </Link>
       {/* Change this to Searchbar */}
       <input
+        name="searchBar"
         className="border-1 rounded-lg px-2 w-[175px] sm:w-[300px] h-[25px] sm:h-[35px]"
         type="text"
         placeholder="Search Manga..."
