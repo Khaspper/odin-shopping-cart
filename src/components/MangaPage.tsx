@@ -17,6 +17,7 @@ export default function MangaPage() {
           src={chosenManga.imgJPG}
           alt={`Cover manga image for ${chosenManga.titleEnglish}`}
           width={300}
+          crossOrigin="anonymous"
         />
       </picture>
       <section className="flex flex-col text-white gap-2">
