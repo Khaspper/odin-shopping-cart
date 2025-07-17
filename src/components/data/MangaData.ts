@@ -1,4 +1,4 @@
-import type { TManga } from "../Types";
+import type { TManga } from "../../Types";
 
 export const favoriteMangas: TManga[] = [
   {
@@ -65,3 +65,5 @@ export const favoriteMangas: TManga[] = [
     genre: ["Action", "Adventure", "Fantasy"],
   },
 ];
+
+export const MangaData: TManga[] = [...favoriteMangas];

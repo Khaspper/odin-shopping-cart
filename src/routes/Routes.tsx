@@ -7,7 +7,7 @@ export const routes = [
     element: <Home />,
   },
   {
-    path: "test/:mangaName",
+    path: "manga/:mangaName",
     element: <MangaPage />,
   },
 ];

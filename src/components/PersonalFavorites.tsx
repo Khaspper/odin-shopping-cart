@@ -1,5 +1,5 @@
 import MangaCard from "./MangaCard";
-import { favoriteMangas } from "../assets/FavoriteManga";
+import { favoriteMangas } from "./data/MangaData";
 
 export default function PersonalFavorites() {
   return (
