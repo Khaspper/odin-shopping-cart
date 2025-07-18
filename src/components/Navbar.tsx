@@ -18,13 +18,14 @@ export default function Navbar() {
       <input
         name="searchBar"
         className="border-1 rounded-lg px-2 w-[175px] sm:w-[300px] h-[25px] sm:h-[35px]"
-        type="text"
+        aria-label="Search Manga"
+        type="search"
         placeholder="Search Manga..."
       />
       <Link to="/cart">
         <img
           src={shoppingCartIcon}
-          alt="shopping cart"
+          alt="shopping cart icon"
           height="auto"
           width={60}
           className="transition delay-100 duration-300 ease-in-out hover:scale-120 cursor-pointer"
