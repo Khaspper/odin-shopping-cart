@@ -26,31 +26,36 @@ export default function MangaPage() {
       </div>
       <section className="flex flex-col text-white gap-5">
         <div className="text-white p-2 overflow-auto bg-zinc-700 rounded-2xl text-center text-5xl flex flex-col gap-2">
-          <p>{chosenManga.titleEnglish}</p>
-          <p className="text-base">{chosenManga.titleJapanese}</p>
+          <h1>{chosenManga.titleEnglish}</h1>
+          <h2 className="text-base">{chosenManga.titleJapanese}</h2>
         </div>
-        <section className="text-white rounded-2xl grid grid-cols-2 gap-2">
+        <section className="text-white rounded-2xl grid grid-cols-2 sm:grid-cols-3 gap-2">
           <section className="bg-zinc-700 p-2 rounded-2xl">
-            <p>Authors:</p>
+            <h1 className="text-2xl">Authors</h1>
             <div className="flex justify-center flex-col overflow-auto gap-1">
               {chosenManga.authors.map((author) => (
-                <p key={author}>{author}</p>
+                <h2 role="author" key={author}>
+                  {author}
+                </h2>
               ))}
             </div>
           </section>
-          <section className="flex flex-col justify-around bg-zinc-700 p-2 rounded-2xl">
-            <p>Score:</p>
-            <p>{chosenManga.score} / 10</p>
+          <section className="flex flex-col bg-zinc-700 p-2 rounded-2xl">
+            <h1 className="text-2xl">Score</h1>
+            <h2 role="score">{chosenManga.score} / 10</h2>
+          </section>
+          <section className="p-2 bg-zinc-700 rounded-2xl col-span-2 sm:col-span-1">
+            <h1 className="text-2xl text-center">Genres</h1>
+            <ul className="text-white max-h-[100px] overflow-auto list-disc list-inside">
+              {chosenManga.genres.map((genre) => (
+                <li key={genre}>{genre}</li>
+              ))}
+            </ul>
           </section>
         </section>
         <p className="text-white p-2 max-h-[200px] overflow-auto bg-zinc-700 rounded-2xl">
           {chosenManga.synopsis}
         </p>
-        <ul className="text-white p-2 max-h-[100px] overflow-auto bg-zinc-700 rounded-2xl list-disc list-inside">
-          {chosenManga.genre.map((genre) => (
-            <li key={genre}>{genre}</li>
-          ))}
-        </ul>
         <button
           type="button"
           className="bg-zinc-700 container py-5 rounded-full text-white hover:cursor-pointer transition delay-100 duration-300 ease-in-out hover:scale-103 ml-auto mr-auto"

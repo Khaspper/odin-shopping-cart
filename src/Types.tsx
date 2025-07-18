@@ -7,5 +7,5 @@ export type TManga = {
   imgJPG: string;
   authors: string[];
   score: number;
-  genre: string[];
+  genres: string[];
 };

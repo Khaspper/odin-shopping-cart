@@ -11,7 +11,7 @@ export const favoriteMangas: TManga[] = [
     imgJPG: "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
     authors: ["Miura, Kentarou", "Studio Gaga"],
     score: 9.47,
-    genre: [
+    genres: [
       "Action",
       "Adventure",
       "Award Winning",
@@ -29,7 +29,7 @@ export const favoriteMangas: TManga[] = [
     imgJPG: "https://cdn.myanimelist.net/images/manga/1/269912.jpg",
     authors: ["Araki, Hirohiko"],
     score: 8.18,
-    genre: ["Action", "Adventure"],
+    genres: ["Action", "Adventure"],
   },
   {
     id: crypto.randomUUID(),
@@ -40,7 +40,7 @@ export const favoriteMangas: TManga[] = [
     imgJPG: "https://cdn.myanimelist.net/images/manga/3/190005.jpg",
     authors: ["Shirahama, Kamome"],
     score: 8.66,
-    genre: ["Fantasy"],
+    genres: ["Fantasy"],
   },
   {
     id: crypto.randomUUID(),
@@ -51,7 +51,7 @@ export const favoriteMangas: TManga[] = [
     imgJPG: "https://cdn.myanimelist.net/images/manga/1/324690.jpg",
     authors: ["Sakamoto, Shinichi"],
     score: 8.82,
-    genre: ["Award Winning", "Drama", "Sports"],
+    genres: ["Award Winning", "Drama", "Sports"],
   },
   {
     id: crypto.randomUUID(),
@@ -62,7 +62,7 @@ export const favoriteMangas: TManga[] = [
     imgJPG: "https://cdn.myanimelist.net/images/manga/1/324626.jpg",
     authors: ["Kawaguchi, Yuuki"],
     score: 8.82,
-    genre: ["Action", "Adventure", "Fantasy"],
+    genres: ["Action", "Adventure", "Fantasy"],
   },
 ];
 
