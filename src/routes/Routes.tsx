@@ -1,5 +1,5 @@
 import Home from "../pages/Home";
-import MangaPage from "../components/MangaPage";
+import MangaPage from "../pages/MangaPage";
 
 export const routes = [
   {

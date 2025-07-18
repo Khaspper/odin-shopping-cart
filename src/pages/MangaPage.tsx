@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import { MangaData } from "./data/MangaData";
-import Navbar from "./Navbar";
+import { MangaData } from "../components/data/MangaData";
+import Navbar from "../components/Navbar";
 
 export default function MangaPage() {
   const { mangaName } = useParams();
