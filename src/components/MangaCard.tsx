@@ -13,7 +13,7 @@ export default function MangaCard({ manga }: TMangaCard) {
     >
       <img
         src={manga.imgJPG}
-        alt={`${manga.titleEnglish} manga cover`}
+        alt={`manga cover`}
         crossOrigin="anonymous"
         width={100}
         className="transition delay-100 duration-300 ease-in-out hover:scale-110 cursor-pointer"

@@ -23,7 +23,7 @@ describe("MangaCard Component", () => {
     expect(within(link).getByText(manga.titleEnglish)).toBeInTheDocument();
 
     const image = screen.getByRole("img", {
-      name: `${manga.titleEnglish} manga cover`,
+      name: `manga cover`,
     });
     //? Image renders
     expect(image).toBeInTheDocument();
