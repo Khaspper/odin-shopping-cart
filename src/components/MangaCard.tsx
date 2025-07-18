@@ -6,7 +6,6 @@ type TMangaCard = {
 };
 
 export default function MangaCard({ manga }: TMangaCard) {
-  console.log(manga);
   return (
     <Link
       to={`manga/${manga.titleEnglish}`}
