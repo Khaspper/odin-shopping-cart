@@ -25,6 +25,7 @@ describe("MangaCard Component", () => {
     const image = screen.getByRole("img", {
       name: `manga cover`,
     });
+
     //? Image renders
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute("src", manga.imgJPG);
