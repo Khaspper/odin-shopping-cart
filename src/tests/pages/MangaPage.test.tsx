@@ -11,7 +11,10 @@ describe("Manga Page", () => {
     render(
       <MemoryRouter initialEntries={[`/manga/${manga.titleEnglish}`]}>
         <Routes>
-          <Route path="/manga/:mangaName" element={<MangaPage />} />
+          <Route
+            path="/manga/:mangaName"
+            element={<MangaPage setChosenManga={() => {}} />}
+          />
         </Routes>
       </MemoryRouter>
     );

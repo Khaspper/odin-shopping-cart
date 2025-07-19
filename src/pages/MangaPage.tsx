@@ -1,10 +1,15 @@
 import { useParams } from "react-router-dom";
-import { MangaData } from "../components/data/MangaData";
+import { mangaData } from "../components/data/MangaData";
 import Navbar from "../components/Navbar";
+import type { TManga } from "../Types";
 
-export default function MangaPage() {
+type TMangaPage = {
+  setChosenManga: React.Dispatch<React.SetStateAction<TManga[]>>;
+};
+
+export default function MangaPage({ setChosenManga }: TMangaPage) {
   const { mangaName } = useParams();
-  const chosenManga = MangaData.find(
+  const chosenManga = mangaData.find(
     (manga) => manga.titleEnglish === mangaName
   )!;
   //TODO: change this design for the navbar
@@ -59,6 +64,7 @@ export default function MangaPage() {
         <button
           type="button"
           className="bg-zinc-700 container py-5 rounded-full text-white hover:cursor-pointer transition delay-100 duration-300 ease-in-out hover:scale-103 ml-auto mr-auto"
+          onClick={() => setChosenManga((oldCart) => [...oldCart, chosenManga])}
         >
           Add to cart
         </button>

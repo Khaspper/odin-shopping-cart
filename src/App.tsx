@@ -2,8 +2,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import MangaPage from "./pages/MangaPage";
 import Cart from "./components/Cart";
+import type { TManga } from "./Types";
+import { useState } from "react";
 
 export default function App() {
+  //! Look at local storage first
+  const [chosenManga, setChosenManga] = useState<TManga[]>([]);
+
   const routes = [
     {
       path: "/",
@@ -11,11 +16,13 @@ export default function App() {
     },
     {
       path: "manga/:mangaName",
-      element: <MangaPage />,
+      element: <MangaPage setChosenManga={setChosenManga} />,
     },
     {
       path: "/cart",
-      element: <Cart />,
+      element: (
+        <Cart chosenManga={chosenManga} setChosenManga={setChosenManga} />
+      ),
     },
   ];
 

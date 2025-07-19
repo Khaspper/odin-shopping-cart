@@ -66,4 +66,4 @@ export const favoriteMangas: TManga[] = [
   },
 ];
 
-export const MangaData: TManga[] = [...favoriteMangas];
+export const mangaData: TManga[] = [...favoriteMangas];
