@@ -11,7 +11,7 @@ describe("Navbar Component", () => {
   it("renders correctly", () => {
     render(
       <MemoryRouter>
-        <Navbar showCart={false} setShowCart={() => {}} />
+        <Navbar />
       </MemoryRouter>
     );
 
