@@ -5,7 +5,7 @@ import PersonalFavorites from "../components/PersonalFavorites";
 export default function Home() {
   return (
     <div
-      className="h-screen bg-[url('../assets/img/website-cover.jpg')] bg-cover bg-center w-full flex flex-col justify-between"
+      className="h-screen bg-[url('../assets/img/website-cover.jpg')] bg-cover bg-center w-full flex flex-col justify-between relative"
       style={{ backgroundImage: `url(${cover})` }}
     >
       <Navbar />

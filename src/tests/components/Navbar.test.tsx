@@ -11,7 +11,7 @@ describe("Navbar Component", () => {
   it("renders correctly", () => {
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar showCart={false} setShowCart={() => {}} />
       </MemoryRouter>
     );
 
@@ -27,12 +27,6 @@ describe("Navbar Component", () => {
     expect(
       screen.getByRole("searchbox", { name: "Search Manga" })
     ).toBeInTheDocument();
-
-    //? Cart Link renders properly
-    const cartLinkImg = screen.getByRole("link", {
-      name: "shopping cart icon",
-    });
-    expect(cartLinkImg).toHaveAttribute("href", `/cart`);
 
     //? Cart Icon renders properly
     const cartIcon = screen.getByRole("img", { name: "shopping cart icon" });

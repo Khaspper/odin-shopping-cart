@@ -35,7 +35,7 @@ export default async function fetchManga(
         imgJPG: data.images.jpg.large_image_url,
         authors: data.authors,
         score: data.score,
-        genre: genre,
+        genres: genre,
       };
       mangas.push(manga);
     }

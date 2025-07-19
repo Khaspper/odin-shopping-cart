@@ -1,8 +1,25 @@
-import { useParams } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./pages/Home";
+import MangaPage from "./pages/MangaPage";
+import Cart from "./components/Cart";
 
-function App() {
-  const { id } = useParams();
-  return <div>Gangster: {id}</div>;
+export default function App() {
+  const routes = [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "manga/:mangaName",
+      element: <MangaPage />,
+    },
+    {
+      path: "/cart",
+      element: <Cart />,
+    },
+  ];
+
+  const router = createBrowserRouter(routes);
+
+  return <RouterProvider router={router} />;
 }
-
-export default App;
