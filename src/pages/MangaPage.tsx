@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 import type { TManga } from "../Types";
 
 type TMangaPage = {
-  setChosenManga: React.Dispatch<React.SetStateAction<TManga[]>>;
+  addManga: (manga: TManga) => void;
 };
 
-export default function MangaPage({ setChosenManga }: TMangaPage) {
+export default function MangaPage({ addManga }: TMangaPage) {
   const { mangaName } = useParams();
   const chosenManga = mangaData.find(
     (manga) => manga.titleEnglish === mangaName
@@ -64,7 +64,7 @@ export default function MangaPage({ setChosenManga }: TMangaPage) {
         <button
           type="button"
           className="bg-zinc-700 container py-5 rounded-full text-white hover:cursor-pointer transition delay-100 duration-300 ease-in-out hover:scale-103 ml-auto mr-auto"
-          onClick={() => setChosenManga((oldCart) => [...oldCart, chosenManga])}
+          onClick={() => addManga(chosenManga)}
         >
           Add to cart
         </button>

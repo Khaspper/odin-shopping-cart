@@ -13,7 +13,7 @@ describe("Manga Page", () => {
         <Routes>
           <Route
             path="/manga/:mangaName"
-            element={<MangaPage setChosenManga={() => {}} />}
+            element={<MangaPage addManga={() => {}} />}
           />
         </Routes>
       </MemoryRouter>

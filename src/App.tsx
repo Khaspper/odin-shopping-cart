@@ -8,6 +8,20 @@ import { useState } from "react";
 export default function App() {
   //! Look at local storage first
   const [chosenManga, setChosenManga] = useState<TManga[]>([]);
+  function handleDeleteManga(mangaToDelete: TManga) {
+    const newMangaList = chosenManga.filter(
+      (manga) => manga.titleEnglish !== mangaToDelete.titleEnglish
+    );
+    setChosenManga(newMangaList);
+  }
+
+  function handleAddManga(mangaToAdd: TManga) {
+    if (!chosenManga.includes(mangaToAdd)) {
+      console.log(`Manga to add: ${mangaToAdd.titleEnglish}`);
+      console.log(chosenManga);
+      setChosenManga([...chosenManga, mangaToAdd]);
+    }
+  }
 
   const routes = [
     {
@@ -16,12 +30,12 @@ export default function App() {
     },
     {
       path: "manga/:mangaName",
-      element: <MangaPage setChosenManga={setChosenManga} />,
+      element: <MangaPage addManga={handleAddManga} />,
     },
     {
       path: "/cart",
       element: (
-        <Cart chosenManga={chosenManga} setChosenManga={setChosenManga} />
+        <Cart chosenManga={chosenManga} deleteManga={handleDeleteManga} />
       ),
     },
   ];
