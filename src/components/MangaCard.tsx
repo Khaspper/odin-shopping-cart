@@ -18,7 +18,7 @@ export default function MangaCard({ manga }: TMangaCard) {
         width={100}
         className="transition delay-100 duration-300 ease-in-out hover:scale-110 cursor-pointer"
       />
-      <p className="truncate text-center text-white">{manga.titleEnglish}</p>
+      <h2 className="truncate text-center text-white">{manga.titleEnglish}</h2>
     </Link>
   );
 }

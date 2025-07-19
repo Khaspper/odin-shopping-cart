@@ -12,7 +12,9 @@ describe("PersonalFavorite Component", () => {
         <PersonalFavorites />
       </MemoryRouter>
     );
-    expect(screen.getByRole("heading")).toHaveTextContent("My Favorite Manga");
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+      "My Favorite Manga"
+    );
 
     const links = screen.getAllByRole("link", { name: /manga cover/i });
 

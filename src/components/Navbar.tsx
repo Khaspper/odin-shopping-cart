@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-      <nav className="flex m-4 md:m-10 items-center justify-around md:self-start gap-1 md:gap-10 bg-gray-300/50 backdrop-blur-sm rounded-xl p-3">
+      <nav className="flex m-4 md:m-10 items-center justify-around md:self-start gap-1 md:gap-10 bg-gray-300/50 backdrop-blur-sm rounded-xl p-3 lg:max-w-[800px]">
         <Link to="/" className="min-w-[50px]">
           <img
             src={mangaIcon}

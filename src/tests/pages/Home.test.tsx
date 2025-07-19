@@ -18,6 +18,8 @@ describe("Home Page", () => {
       screen.getByRole("link", { name: /manga book icon/i })
     ).toHaveAttribute("href", "/");
 
-    expect(screen.getByRole("heading")).toHaveTextContent("My Favorite Manga");
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(
+      "My Favorite Manga"
+    );
   });
 });
