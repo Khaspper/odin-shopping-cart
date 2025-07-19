@@ -11,11 +11,17 @@ describe("Render Manga Card Cart", () => {
       </MemoryRouter>
     );
     //? Make sure the link is present
-    const mangaPageLink = screen.getByRole("link");
-    expect(mangaPageLink).toHaveAttribute(
-      "href",
-      `/manga/${favoriteMangas[0].titleEnglish}`
+    const mangaPageLink = screen.getAllByRole("link");
+    mangaPageLink.forEach((link) =>
+      expect(link).toHaveAttribute(
+        "href",
+        `/manga/${favoriteMangas[0].titleEnglish}`
+      )
     );
+
+    //? Make sure the manga cover is shown
+    const mangaCover = screen.getByRole("img");
+    expect(mangaCover).toHaveAttribute("src", favoriteMangas[0].imgJPG);
 
     //? Make sure the manga Title is present
     const mangaTitle = screen.getByRole("heading", {

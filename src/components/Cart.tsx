@@ -8,11 +8,11 @@ type TMangaPage = {
 
 export default function Cart({ chosenManga, deleteManga }: TMangaPage) {
   return (
-    <>
-      <div className="w-screen flex justify-center items-center border-2">
+    <div className="min-h-[100vh] bg-zinc-800">
+      <div className="flex justify-center items-center border-2">
         <Navbar />
       </div>
-      <div className="border-2 h-[100%] flex flex-col">
+      <div className="border-2 h-[100%] flex flex-wrap gap-4">
         {chosenManga.map((manga) => (
           <MangaCardCart
             key={manga.id}
@@ -21,6 +21,6 @@ export default function Cart({ chosenManga, deleteManga }: TMangaPage) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
