@@ -4,6 +4,7 @@ import MangaPage from "./pages/MangaPage";
 import Cart from "./components/Cart";
 import type { TManga } from "./Types";
 import { useState } from "react";
+import Shop from "./pages/Shop";
 
 export default function App() {
   //! Look at local storage first
@@ -37,6 +38,10 @@ export default function App() {
       element: (
         <Cart chosenManga={chosenManga} deleteManga={handleDeleteManga} />
       ),
+    },
+    {
+      path: "/shop",
+      element: <Shop chosenManga={chosenManga} />,
     },
   ];
 
