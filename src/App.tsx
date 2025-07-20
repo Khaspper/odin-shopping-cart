@@ -26,11 +26,11 @@ export default function App() {
   const routes = [
     {
       path: "/",
-      element: <Home />,
+      element: <Home chosenManga={chosenManga} />,
     },
     {
       path: "manga/:mangaName",
-      element: <MangaPage addManga={handleAddManga} />,
+      element: <MangaPage addManga={handleAddManga} mangaList={chosenManga} />,
     },
     {
       path: "/cart",

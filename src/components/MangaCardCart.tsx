@@ -8,7 +8,7 @@ type TMangaCardCart = {
 
 export default function MangaCardCart({ manga, deleteManga }: TMangaCardCart) {
   return (
-    <div className="flex grow shrink p-5 gap-10 max-w-[450px] text-white">
+    <div className="flex grow shrink p-5 gap-10 text-white border-t-2 w-screen h-[250px] items-center">
       <Link to={`/manga/${manga.titleEnglish}`}>
         <img
           src={manga.imgJPG}
@@ -20,26 +20,24 @@ export default function MangaCardCart({ manga, deleteManga }: TMangaCardCart) {
       </Link>
       <div>
         <Link to={`/manga/${manga.titleEnglish}`}>
-          <h1 className=" border-white text-wrap max-w-[200px]">
+          <h1 className=" border-white text-wrap max-w-[700px] sm:text-5xl">
             {manga.titleEnglish}
           </h1>
         </Link>
-        <div>
-          <Link to={`/manga/${manga.titleEnglish}`}>
+        <div className="flex sm:text-xl mt-2">
+          <Link to={`/manga/${manga.titleEnglish}`} className="flex">
             {manga.authors.map((author) => (
-              <h3 className=" border-white" key={author}>
-                {author}
-              </h3>
+              <h3 key={author}>{author}&nbsp;</h3>
             ))}
           </Link>
         </div>
       </div>
       <button
         type="button"
-        className=" p-5 ml-auto self-start cursor-pointer border-2 rounded-full"
+        className="ml-auto self-start cursor-pointer rounded-full text-2xl"
         onClick={() => deleteManga(manga)}
       >
-        Delete
+        X
       </button>
     </div>
   );

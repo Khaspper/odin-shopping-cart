@@ -37,7 +37,7 @@ describe("Render Manga Card Cart", () => {
       expect(author).toHaveTextContent(favoriteMangas[0].authors[index]);
     });
 
-    const deleteButton = screen.getByRole("button", { name: /Delete/i });
+    const deleteButton = screen.getByRole("button", { name: /X/i });
     expect(deleteButton).toBeInTheDocument();
   });
 });

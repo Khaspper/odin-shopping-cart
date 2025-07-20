@@ -5,9 +5,10 @@ import type { TManga } from "../Types";
 
 type TMangaPage = {
   addManga: (manga: TManga) => void;
+  mangaList: TManga[];
 };
 
-export default function MangaPage({ addManga }: TMangaPage) {
+export default function MangaPage({ addManga, mangaList }: TMangaPage) {
   const { mangaName } = useParams();
   const chosenManga = mangaData.find(
     (manga) => manga.titleEnglish === mangaName
@@ -17,7 +18,7 @@ export default function MangaPage({ addManga }: TMangaPage) {
     <div className="h-full lg:h-screen bg-zinc-800 flex flex-col gap-5 items-center px-3 py-5 lg:grid lg:grid-cols-2 ">
       <div className="grid">
         <div>
-          <Navbar />
+          <Navbar chosenManga={mangaList} />
         </div>
         <picture className="flex justify-center">
           <source srcSet={chosenManga.imgWEBP} type="image/webp" />
