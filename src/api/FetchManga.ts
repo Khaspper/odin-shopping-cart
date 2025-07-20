@@ -1,10 +1,10 @@
 import type { TManga } from "../Types";
 
-type TFilter = "" | "publishing" | "bypopularity" | "favorite";
+type TFilter = "publishing" | "bypopularity" | "favorite";
 
 export default async function fetchManga(
   limit: number = 3,
-  filter: TFilter = "",
+  filter: TFilter = "bypopularity",
   signal?: AbortSignal
 ) {
   try {
@@ -28,6 +28,11 @@ export default async function fetchManga(
         genre.push(genres.name);
       }
 
+      const authorsList: string[] = [];
+      for (const author of data.authors) {
+        authorsList.push(author.name);
+      }
+
       const manga: TManga = {
         id: crypto.randomUUID(),
         titleEnglish: data.title_english,
@@ -35,7 +40,7 @@ export default async function fetchManga(
         synopsis: data.synopsis,
         imgWEBP: data.images.webp.large_image_url,
         imgJPG: data.images.jpg.large_image_url,
-        authors: data.authors,
+        authors: authorsList,
         score: data.score,
         genres: genre,
       };

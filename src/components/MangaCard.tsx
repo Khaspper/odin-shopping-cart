@@ -8,7 +8,7 @@ type TMangaCard = {
 export default function MangaCard({ manga }: TMangaCard) {
   return (
     <Link
-      to={`manga/${manga.titleEnglish}`}
+      to={`/manga/${manga.titleEnglish}`}
       className="h-full flex flex-col justify-between grow shrink min-w-[60px] max-w-[90px] md:w-[100px] xl:w-[110px] p-3"
     >
       <img

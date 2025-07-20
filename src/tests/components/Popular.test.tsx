@@ -1,7 +1,7 @@
 import { MemoryRouter } from "react-router-dom";
 import { it, expect } from "vitest";
 import Popular from "../../components/Popular";
-import { render, waitFor } from "@testing-library/react";
+import { render, waitFor, screen } from "@testing-library/react";
 
 describe("Popular component", () => {
   beforeEach(() => {
@@ -41,6 +41,9 @@ describe("Popular component", () => {
     );
     await waitFor(() => {
       expect(window.fetch).toHaveBeenCalledTimes(1);
+
+      const mangaLink = screen.getByRole("link");
+      expect(mangaLink).toHaveAttribute("href", "/manga/Naruto");
     });
   });
 });

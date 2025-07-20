@@ -13,7 +13,8 @@ export default function MangaPage({ addManga, mangaList }: TMangaPage) {
   const chosenManga = mangaData.find(
     (manga) => manga.titleEnglish === mangaName
   )!;
-  //TODO: change this design for the navbar
+  console.log(`${chosenManga.titleEnglish}:`);
+  console.log(chosenManga);
   return (
     <div className="h-full lg:h-screen bg-zinc-800 flex flex-col gap-5 items-center px-3 py-5 lg:grid lg:grid-cols-2 ">
       <div className="grid">
