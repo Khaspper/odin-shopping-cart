@@ -18,3 +18,7 @@ We "console.log" a `container` by doing this
 
 to "console.log" a `asFragment` we have to import prettyDOM from `@testing-library/dom` and do this
 `console.log(prettyDOM(asFragment()))`
+
+While writing the FetchManga.tsx code I learned that you need to make your api the exact shape of the json file you are parsing through
+
+anything you are waiting for to be rendered use await waitfor...

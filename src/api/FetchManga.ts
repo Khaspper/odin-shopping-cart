@@ -1,16 +1,18 @@
 import type { TManga } from "../Types";
 
-type TFilter = "" | "publishing" | "upcoming" | "bypopularity" | "favorite";
+type TFilter = "" | "publishing" | "bypopularity" | "favorite";
 
 export default async function fetchManga(
   limit: number = 3,
-  filter: TFilter = ""
+  filter: TFilter = "",
+  signal?: AbortSignal
 ) {
   try {
     const response = await fetch(
       `https://api.jikan.moe/v4/top/manga?limit=${limit}&${filter}`,
       {
         mode: "cors",
+        signal,
       }
     );
     if (!response.ok) {
@@ -39,7 +41,6 @@ export default async function fetchManga(
       };
       mangas.push(manga);
     }
-    console.log(mangas);
     return mangas;
   } catch (error) {
     console.log("error");
