@@ -5,6 +5,9 @@ import Cart from "./components/Cart";
 import type { TManga } from "./Types";
 import { useState } from "react";
 import Shop from "./pages/Shop";
+import Popular from "./components/Popular";
+import OnGoing from "./components/OnGoing";
+import CommunityFavorites from "./components/CommunityFavorites";
 
 export default function App() {
   //! Look at local storage first
@@ -42,6 +45,20 @@ export default function App() {
     {
       path: "/shop",
       element: <Shop chosenManga={chosenManga} />,
+      children: [
+        {
+          path: "/shop/popular",
+          element: <Popular />,
+        },
+        {
+          path: "/shop/ongoing",
+          element: <OnGoing />,
+        },
+        {
+          path: "/shop/community-favorite",
+          element: <CommunityFavorites />,
+        },
+      ],
     },
   ];
 

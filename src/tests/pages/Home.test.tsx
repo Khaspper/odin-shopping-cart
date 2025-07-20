@@ -7,7 +7,7 @@ describe("Home Page", () => {
   it("Renders Home page correctly", () => {
     const { container } = render(
       <MemoryRouter>
-        <Home />
+        <Home chosenManga={[]} />
       </MemoryRouter>
     );
 

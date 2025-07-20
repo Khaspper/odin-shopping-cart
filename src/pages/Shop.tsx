@@ -1,4 +1,7 @@
 import type { TManga } from "../Types";
+import Navbar from "../components/Navbar";
+import MangaFilter from "../components/MangaFilter";
+import { Outlet } from "react-router-dom";
 
 type TStore = {
   chosenManga: TManga[];
@@ -6,8 +9,12 @@ type TStore = {
 
 export default function Shop({ chosenManga }: TStore) {
   return (
-    <>
-      <h1>Store: {chosenManga.length > 0 && chosenManga[0].titleEnglish}</h1>
-    </>
+    <div className=" bg-stone-900 h-screen">
+      <div className="flex justify-start">
+        <Navbar chosenManga={chosenManga} />
+        <MangaFilter />
+      </div>
+      <Outlet />
+    </div>
   );
 }

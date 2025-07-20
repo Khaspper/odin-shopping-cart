@@ -11,7 +11,7 @@ describe("Navbar Component", () => {
   it("renders correctly", () => {
     render(
       <MemoryRouter>
-        <Navbar />
+        <Navbar chosenManga={[]} />
       </MemoryRouter>
     );
 
@@ -22,11 +22,6 @@ describe("Navbar Component", () => {
     //? Manga icon renders properly
     const mangaIconImg = screen.getByRole("img", { name: "manga book icon" });
     expect(mangaIconImg).toHaveAttribute("src", mangaIcon);
-
-    //? Search input renders properly
-    expect(
-      screen.getByRole("searchbox", { name: "Search Manga" })
-    ).toBeInTheDocument();
 
     //? Cart Icon renders properly
     const cartIcon = screen.getByRole("img", { name: "shopping cart icon" });

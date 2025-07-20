@@ -9,7 +9,7 @@ type TMangaPage = {
 export default function Cart({ chosenManga, deleteManga }: TMangaPage) {
   return (
     <div className="min-h-[100vh] bg-zinc-800">
-      <div className="flex justify-center items-center border-2">
+      <div className="flex justify-start items-center border-2">
         <Navbar chosenManga={chosenManga} />
       </div>
       <div className="h-[100%] flex flex-wrap gap-4">
