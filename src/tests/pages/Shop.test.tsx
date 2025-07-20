@@ -11,6 +11,10 @@ describe("Shop Page", () => {
       </MemoryRouter>
     );
 
+    //? Check if popular Navbar is present
+    const navbarIcon = screen.getByRole("link", { name: /manga book icon/i });
+    expect(navbarIcon).toBeInTheDocument();
+
     //? Check if popular Link is present
     const popularTitle = screen.getByRole("link", { name: /Popular/i });
     expect(popularTitle).toBeInTheDocument();
