@@ -18,7 +18,7 @@ export default function Popular() {
       const fetchData = async () => {
         try {
           const fetchedData = await fetchManga(
-            3,
+            20,
             "bypopularity",
             controller.signal
           );

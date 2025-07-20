@@ -1,6 +1,8 @@
 import type { TManga } from "../../Types";
 
 export const popularMangas: TManga[] = [];
+export const onGoingMangas: TManga[] = [];
+export const communityFavoritesMangas: TManga[] = [];
 
 export const favoriteMangas: TManga[] = [
   {

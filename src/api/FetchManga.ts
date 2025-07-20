@@ -9,7 +9,7 @@ export default async function fetchManga(
 ) {
   try {
     const response = await fetch(
-      `https://api.jikan.moe/v4/top/manga?limit=${limit}&${filter}`,
+      `https://api.jikan.moe/v4/top/manga?limit=${limit}&filter=${filter}`,
       {
         mode: "cors",
         signal,

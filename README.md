@@ -22,3 +22,21 @@ to "console.log" a `asFragment` we have to import prettyDOM from `@testing-libra
 While writing the FetchManga.tsx code I learned that you need to make your api the exact shape of the json file you are parsing through
 
 anything you are waiting for to be rendered use await waitfor...
+
+Omg I did it
+
+I finished the project
+
+MVP!!!
+
+it works everything works the styling is butt cheeks
+
+but everything freaking works!!!!
+
+the tests I made for ongoing and communityfavorites component is not written they just follow popular components test so I didn't really see the point in it... anyways... I freaking did it...
+
+this has to be the hardest project I have done I understood everything tho... I feel like I learned a lot especially with async and await and TDD...
+
+TDD isn't that bad I supposed
+
+AND THE PERFORMANCE IS AT 100!!!!!!!
